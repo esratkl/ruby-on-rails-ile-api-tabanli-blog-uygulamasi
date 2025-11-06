@@ -1,0 +1,9 @@
+{
+  "endpoint": "/users/494",
+  "method": "GET",
+  "statusCode": 200,
+  "responseTime": 48,
+  "success": true,
+  "timestamp": "2025-11-05T19:52:34.837Z",
+  "responseBody": "{\n  \"id\": 494,\n  \"name\": \"Test User\",\n  \"email\": \"testuser@example.com\",\n  \"created_at\": \"2025-11-05T19:52:34.775Z\",\n  \"updated_at\": \"2025-11-05T19:52:34.775Z\"\n}"
+}

@@ -1,0 +1,6 @@
+file 'hello.cy.js.mp4'
+file 'users_spec.cy.js.mp4'
+file 'posts_spec.cy.js.mp4'
+file 'comments_spec.cy.js.mp4'
+file 'categories_spec.cy.js.mp4'
+file 'tags_spec.cy.js.mp4'

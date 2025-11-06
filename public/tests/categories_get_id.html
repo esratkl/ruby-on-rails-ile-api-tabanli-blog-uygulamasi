@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GET /categories/:id - Tek Kategori Getir</title>
+  <link rel="stylesheet" href="/tests/style.css">
+</head>
+<body>
+  <div class="test-container">
+    <div class="test-header">
+      <h2 class="test-title">🔍 GET /categories/:id</h2>
+      <p class="test-subtitle">Tek bir kategoriyi göster</p>
+    </div>
+    <div class="endpoint-info">
+      <div class="info-card"><div class="info-label">Method</div><div class="info-value method-get">GET</div></div>
+      <div class="info-card"><div class="info-label">Endpoint</div><div class="info-value endpoint">/categories/:id</div></div>
+      <div class="info-card"><div class="info-label">Beklenen Status</div><div class="info-value status-expected">200 OK</div></div>
+      <div class="info-card"><div class="info-label">Test Durumu</div><div class="info-value status-badge status-pending">Bekleniyor</div></div>
+    </div>
+    <div class="test-description">
+      <h3>Test Açıklaması</h3>
+      <p>Bu test, belirli bir kategorinin detaylarını getirir. Başarılı bir yanıt, kategorinin tam bilgilerini döndürmelidir.</p>
+    </div>
+  </div>
+  <script>
+    window.addEventListener('message', function(event) {
+      if (event.data && event.data.type === 'test-status') {
+        const badge = document.querySelector('.status-badge');
+        if (badge) {
+          badge.className = `status-badge status-${event.data.status}`;
+          badge.textContent = event.data.status === 'passed' ? '✅ Başarılı' : event.data.status === 'failed' ? '❌ Başarısız' : 'Bekleniyor';
+        }
+      }
+    });
+  </script>
+</body>
+</html>
+

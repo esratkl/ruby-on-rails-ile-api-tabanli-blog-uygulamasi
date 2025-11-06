@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tags API Test</title>
+  <link rel="stylesheet" href="/tests/style.css">
+</head>
+<body>
+  <div class="test-container">
+    <div class="test-header">
+      <h2 class="test-title">🏷️ Tags API Test</h2>
+      <p class="test-subtitle">Tüm etiket istekleri burada test edilir.</p>
+    </div>
+
+    <table class="test-table">
+      <thead>
+        <tr>
+          <th>Method</th>
+          <th>Endpoint</th>
+          <th>Expected</th>
+          <th>Result</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="method-get">GET</span></td>
+          <td><span class="endpoint">/tags</span></td>
+          <td><span class="expected-result">200 OK - List all tags</span></td>
+          <td><span class="status-badge status-pending">Pending</span></td>
+        </tr>
+        <tr>
+          <td><span class="method-get">GET</span></td>
+          <td><span class="endpoint">/tags/:id</span></td>
+          <td><span class="expected-result">200 OK - Show single tag</span></td>
+          <td><span class="status-badge status-pending">Pending</span></td>
+        </tr>
+        <tr>
+          <td><span class="method-post">POST</span></td>
+          <td><span class="endpoint">/tags</span></td>
+          <td><span class="expected-result">201 Created - Create new tag</span></td>
+          <td><span class="status-badge status-pending">Pending</span></td>
+        </tr>
+        <tr>
+          <td><span class="method-put">PUT</span></td>
+          <td><span class="endpoint">/tags/:id</span></td>
+          <td><span class="expected-result">200 OK - Update tag</span></td>
+          <td><span class="status-badge status-pending">Pending</span></td>
+        </tr>
+        <tr>
+          <td><span class="method-delete">DELETE</span></td>
+          <td><span class="endpoint">/tags/:id</span></td>
+          <td><span class="expected-result">204 No Content - Delete tag</span></td>
+          <td><span class="status-badge status-pending">Pending</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <script>
+    // Optional: Update status dynamically via postMessage
+    window.addEventListener('message', function(event) {
+      if (event.data && event.data.type === 'test-status') {
+        const rows = document.querySelectorAll('.test-table tbody tr');
+        const testIndex = event.data.index;
+        const status = event.data.status;
+        if (rows[testIndex]) {
+          const badge = rows[testIndex].querySelector('.status-badge');
+          badge.className = `status-badge status-${status}`;
+          badge.textContent = status === 'passed' ? '✅ Passed' : status === 'failed' ? '❌ Failed' : 'Pending';
+        }
+      }
+    });
+  </script>
+</body>
+</html>
+

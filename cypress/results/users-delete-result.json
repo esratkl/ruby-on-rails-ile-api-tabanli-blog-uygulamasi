@@ -1,0 +1,9 @@
+{
+  "endpoint": "/users/496",
+  "method": "DELETE",
+  "statusCode": 204,
+  "responseTime": 50,
+  "success": true,
+  "timestamp": "2025-11-05T19:52:36.866Z",
+  "responseBody": null
+}

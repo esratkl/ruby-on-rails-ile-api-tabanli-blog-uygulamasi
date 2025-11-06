@@ -1,0 +1,9 @@
+{
+  "endpoint": "/users",
+  "method": "POST",
+  "statusCode": 201,
+  "responseTime": 50,
+  "success": true,
+  "timestamp": "2025-11-05T19:52:33.842Z",
+  "responseBody": "{\n  \"id\": 493,\n  \"name\": \"Esra Test\",\n  \"email\": \"esra@example.com\",\n  \"created_at\": \"2025-11-05T19:52:33.823Z\",\n  \"updated_at\": \"2025-11-05T19:52:33.823Z\"\n}"
+}

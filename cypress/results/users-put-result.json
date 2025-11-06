@@ -1,0 +1,9 @@
+{
+  "endpoint": "/users/495",
+  "method": "PUT",
+  "statusCode": 200,
+  "responseTime": 59,
+  "success": true,
+  "timestamp": "2025-11-05T19:52:35.858Z",
+  "responseBody": "{\n  \"name\": \"Updated Name\",\n  \"email\": \"updated@example.com\",\n  \"id\": 495,\n  \"created_at\": \"2025-11-05T19:52:35.782Z\",\n  \"updated_at\": \"2025-11-05T19:52:35.841Z\"\n}"
+}
