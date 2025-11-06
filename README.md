@@ -1,54 +1,56 @@
-# 🚀 Blog API
+# 🚀 Blog API (Ruby on Rails)
 
-Bu proje, **Ruby on Rails** kullanılarak geliştirilmiş bir **API-only blog uygulamasıdır**.
-Amaç, **5 model (User, Post, Comment, Category, Tag)** arasındaki ilişkileri yönetmek, CRUD işlemleri gerçekleştirmek ve **backend geliştirme becerilerini güçlendirmektir.**
+Ruby on Rails kullanılarak geliştirilmiş **API tabanlı blog uygulaması**.  
+Amaç, **User, Post, Comment, Category, Tag** modelleri arasında CRUD işlemlerini gerçekleştirmek ve backend testlerini otomatikleştirmektir.
 
 ---
 
 ## 🌟 Özellikler
-
-* 👤 Kullanıcılar (User) oluşturabilir ve yönetebilir
-* 📝 Yazılar (Post) ekleyebilir, güncelleyebilir ve silebilir
-* 💬 Yazılara yorum (Comment) yapabilir
-* 🗂️ Yazıları kategorilere (Category) ve etiketlere (Tag) atayabilir
-* ⚙️ Tüm işlemler JSON formatında API aracılığıyla gerçekleştirilebilir
-
----
-
-## 🧠 Kullanılan Teknolojiler
-
-| Teknoloji                      | Açıklama                   |
-| ------------------------------ | -------------------------- |
-| **Ruby 3.x**                   | Programlama dili           |
-| **Ruby on Rails 7 (API-only)** | Web framework              |
-| **PostgreSQL**                 | Veritabanı yönetim sistemi |
-| **ActiveRecord**               | ORM katmanı                |
-| **Postman / cURL**             | API test araçları          |
+- 👤 Kullanıcı yönetimi (User)
+- 📝 Gönderi oluşturma, güncelleme, silme (Post)
+- 💬 Yorum ekleme (Comment)
+- 🗂️ Kategorilendirme (Category)
+- 🏷️ Etiketleme (Tag)
+- ⚙️ JSON formatında API yanıtları
+- 🎥 Cypress testleri + otomatik demo videoları
 
 ---
 
-## ⚡ API Modelleri
-
-* `User` → Kullanıcı bilgilerini yönetir
-* `Post` → Yazıların başlık ve içeriklerini tutar
-* `Comment` → Yazılara yapılan yorumları temsil eder
-* `Category` → Yazıların ait olduğu kategorileri belirler
-* `Tag` → Yazılara etiketleme özelliği kazandırır
+## 🧠 Teknolojiler
+| Teknoloji | Açıklama |
+|------------|-----------|
+| **Ruby 3.x** | Programlama dili |
+| **Rails 7 (API-only)** | Framework |
+| **PostgreSQL** | Veritabanı |
+| **ActiveRecord** | ORM katmanı |
+| **Cypress** | Test aracı |
 
 ---
 
-## 📦 Kurulum
+## ⚡ API Endpointleri (Örnek)
 
-```bash
-# Projeyi klonla
-git clone https://github.com/kullaniciadi/blog_api.git
-cd blog_api
+| Model | Endpoint | İşlem |
+|--------|-----------|--------|
+| **User** | `/users` | Listele, ekle, güncelle, sil |
+| **Post** | `/posts` | Listele, ekle, güncelle, sil |
+| **Comment** | `/comments` | Listele, ekle, güncelle, sil |
+| **Category** | `/categories` | Listele, ekle, güncelle, sil |
+| **Tag** | `/tags` | Listele, ekle, güncelle, sil |
 
-# Gerekli gem'leri yükle
-bundle install
+---
 
-# Veritabanını oluştur
-rails db:create db:migrate
+## 🧪 Testler
+Cypress ile tüm modeller için testler oluşturulmuştur:
 
-# Sunucuyu başlat
-rails s
+📁 `users_spec.cy.js`  
+📁 `posts_spec.cy.js`  
+📁 `comments_spec.cy.js`  
+📁 `categories_spec.cy.js`  
+📁 `tags_spec.cy.js`  
+
+Her test:
+- GET / POST / PUT / DELETE işlemlerini test eder  
+- Görsel arayüz oluşturur  
+- Başarılı testleri **video olarak kaydeder**
+
+---
